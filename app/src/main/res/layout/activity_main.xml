@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -11,7 +13,7 @@
         android:id="@+id/user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@android:color/holo_green_dark"
         android:gravity="center"
         android:visibility="invisible"
         android:padding="15dp"
@@ -22,6 +24,8 @@
         android:id="@+id/email"
         android:layout_marginTop="40dp"
         android:hint="Email"
+        android:singleLine="true"
+        android:textColor="@android:color/holo_orange_dark"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -29,6 +33,8 @@
     <EditText
         android:id="@+id/pass"
         android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/holo_orange_dark"
         android:layout_marginTop="20dp"
         android:hint="Password"
         android:layout_width="match_parent"
@@ -38,12 +44,18 @@
         android:id="@+id/signIn"
         android:layout_marginTop="50dp"
         android:text="Sign-In"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/signOut"
         android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:text="Sign-Out"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -51,6 +63,9 @@
     <Button
         android:id="@+id/newAccount"
         android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:text="Create new Account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -59,11 +74,17 @@
         android:id="@+id/dbase"
         android:layout_marginTop="10dp"
         android:text="Write Database"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/dbase2"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:text="Read Database"
         android:layout_width="match_parent"
