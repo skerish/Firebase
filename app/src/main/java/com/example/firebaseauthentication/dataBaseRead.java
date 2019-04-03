@@ -25,6 +25,7 @@ public class dataBaseRead extends AppCompatActivity {
     ListView listView;
 
     private static final String TAG = "dataBaseRead";
+    private String uID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class dataBaseRead extends AppCompatActivity {
         reference = database.getReference();
 
         FirebaseUser user = mAuth.getCurrentUser();
-        String uID = user.getUid();
+        uID = user.getUid();
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -54,9 +55,6 @@ public class dataBaseRead extends AppCompatActivity {
     }
 
     private void printing(DataSnapshot dataSnapshot) {
-
-        FirebaseUser user = mAuth.getCurrentUser();
-        String uID = user.getUid();
 
         for (DataSnapshot ds : dataSnapshot.getChildren()) {         //DataSnapshot will take snapshot of first directory
                                                                     // which is "users" in this case.

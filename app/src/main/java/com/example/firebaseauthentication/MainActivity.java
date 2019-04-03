@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     EditText email, pass;
-    Button btnIn, btnOut, newAcc, dBase, dBaseRead;
+    Button btnIn, btnOut, newAcc, dBase, dBaseRead, image;
     TextView textView;
 
     private FirebaseAuth mAuth;
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         dBase = findViewById(R.id.dbase);
         dBaseRead = findViewById(R.id.dbase2);
         textView = findViewById(R.id.user);
+        image = findViewById(R.id.img);
 
         btnIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +117,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser user = mAuth.getCurrentUser();
+                if(user != null){
+                    Intent intent = new Intent(MainActivity.this, ImageUpload.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Error! Sign in first", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     private void createNewAccount(String em, String ps) {
@@ -170,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             String name = user.getEmail();
             textView.setText(name);
             textView.setVisibility(View.VISIBLE);
+            email.setFocusable(true);
         }
         else{
             textView.setText("");
@@ -177,13 +193,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mAuth.signOut();
-        textView.setText("");
-        textView.setVisibility(View.INVISIBLE);
-    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        mAuth.signOut();
+//        textView.setText("");
+//        textView.setVisibility(View.INVISIBLE);
+//    }
 
     @Override
     public void onStart() {
