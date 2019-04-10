@@ -32,6 +32,7 @@ public class ImageUpload extends AppCompatActivity {
     Button uploadBtn, chooseImg;
     ImageView imageView;
     EditText imageName;
+    ProgressBar progressBar;
 
     private Uri uri;
 
@@ -47,6 +48,7 @@ public class ImageUpload extends AppCompatActivity {
         chooseImg = findViewById(R.id.btns);
         imageView = findViewById(R.id.img);
         imageName = findViewById(R.id.name);
+        progressBar = findViewById(R.id.progress);
 
         mStorageRef = FirebaseStorage.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -69,6 +71,9 @@ public class ImageUpload extends AppCompatActivity {
                 FirebaseUser user = mAuth.getCurrentUser();
                 String uID = user.getUid();
 
+                progressBar.setVisibility(View.VISIBLE);
+                progressBar.bringToFront();
+
                 String name = imageName.getText().toString();
                 if (!name.equals("")){
                     Uri file = uri;
@@ -81,6 +86,7 @@ public class ImageUpload extends AppCompatActivity {
                                         // Get a URL to the uploaded content
                                         imageName.setText("");
                                         imageView.setImageURI(null);
+                                        progressBar.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_SHORT).show();
                                     }
                                 })
@@ -88,6 +94,7 @@ public class ImageUpload extends AppCompatActivity {
                                     @Override
                                     public void onFailure(@NonNull Exception exception) {
                                         Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
+                                        progressBar.setVisibility(View.INVISIBLE);
                                     }
                                 });
                     }

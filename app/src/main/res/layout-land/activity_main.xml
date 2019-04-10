@@ -1,103 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/user"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_light"
-        android:gravity="center"
-        android:visibility="invisible"
-        android:padding="15dp"
-        android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_marginTop="40dp"
-        android:hint="Email"
-        android:singleLine="true"
-        android:textColor="@android:color/holo_orange_dark"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/pass"
-        android:gravity="center"
-        android:singleLine="true"
-        android:textColor="@android:color/holo_orange_dark"
-        android:layout_marginTop="20dp"
-        android:hint="Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_marginTop="40dp"
+            android:hint="Email"
+            android:singleLine="true"
+            android:textColor="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/signIn"
-        android:layout_marginTop="30dp"
-        android:text="Sign-In"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/pass"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/signOut"
-        android:layout_marginTop="15dp"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="Sign-Out"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/signIn"
+            android:layout_marginTop="30dp"
+            android:text="Sign-In"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/newAccount"
-        android:layout_marginTop="15dp"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="Create new Account"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/signOut"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Sign-Out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/dbase"
-        android:layout_marginTop="15dp"
-        android:text="Write Database"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/newAccount"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Create new Account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/dbase2"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:text="Read Database"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/dbase"
+            android:layout_marginTop="15dp"
+            android:text="Write Database"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/img"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:text="Upload Image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/dbase2"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="Read Database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/img"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="Upload Image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

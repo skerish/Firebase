@@ -21,6 +21,10 @@
             "package_name": "com.example.firebaseauthentication",
             "certificate_hash": "09af0047cd7987a6beaecbbf0297e5e9f64fce58"
           }
+        },
+        {
+          "client_id": "343589839201-j6drf5oqsod9f279ht5cssl7kdv6sehf.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
